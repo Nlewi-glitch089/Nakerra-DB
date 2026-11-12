@@ -4,19 +4,12 @@ A modern blog platform built with Next.js, featuring wellness check-ins, threade
 
 ## 📊 Current Status
 
-### ✅ Foundation Complete (100%)
-- ✅ **Database Schema** - Complete Prisma schema with all models
-- ✅ **Project Structure** - All folders and files in place
-- ✅ **Dependencies** - All required packages configured
-- ✅ **Test Infrastructure** - Vitest configured with test setup
-- ✅ **Prisma Client** - Singleton pattern implemented
-- ✅ **Seed Script** - Sample data seeding ready
+### Current implementation status
 
-### ⚠️ Features Need Implementation (1/19 Complete)
-- ⚠️ **API Routes** - All endpoints are stubs with TODO comments
-- ✅ **RBAC** - Complete permission system with tests and documentation (Quil)
-- ⚠️ **Utilities** - Validations, password, auth, email are stubs
-- ⚠️ **Tests** - Test files exist but need implementation
+- The repository includes a Next.js application, Prisma schema, database utilities, and test configuration.
+- The role-based access-control module is implemented and has a dedicated test suite.
+- API route implementations exist, including post listing and creation; other route groups should be reviewed and tested individually rather than assumed complete.
+- Some utility modules, workflows, and tests may still contain unfinished work. Use the current code and test results as the source of truth; older task checklists below may not reflect the latest implementation.
 
 ## 🚀 Quick Start
 
@@ -109,7 +102,7 @@ pnpm test:coverage
 
 ### Database
 - **Neon PostgreSQL** (Serverless)
-- **Prisma ORM v7**
+- **Prisma ORM v5.19**
 - Full-text search
 - Self-referencing relations
 - Transactions
@@ -486,7 +479,10 @@ SMTP_FROM=noreply@yourdomain.com
 NODE_ENV=development
 ```
 
-## 🚀 Deployment
+## Deployment readiness
+
+This repository is an evolving group project. Although a Vercel deployment path is described below, do not treat the project as production-ready solely because it builds or deploys. Verify sign-up/sign-in, role permissions, post/comment workflows, password reset, wellness routes, and database migrations in a staging environment first. The repository does not currently document a verified public production URL.
+
 
 ### Vercel (Recommended)
 1. Connect your GitHub repository
